@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Restaurant Frontend Assignment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(90deg, #fceabb 0%, #fcc8d8 100%);
+    color: #151515;
+    min-height: 100vh;
+}
+.navbar {
+    width: 100%;
+    background: #ff8080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li {
+    padding: 24px 30px;
+}
+.navbar ul li a {
+    color: #151515;
+    text-decoration: none;
+    transition: color .2s;
+}
+.navbar ul li a:hover {
+    color: #fff;
+}
+.menu-icon {
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: 32px;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .navbar ul {
+    flex-direction: column;
+    background: #ff8080;
+    width: 100vw;
+    }
+    .navbar ul li { padding: 18px 0; }
+}
+
+.main {
+    display: flex;
+    min-height: 80vh;
+}
+.main-left, .main-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+.main-left {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-left h1 {
+    font-size: 54px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 4px;
+}
+.main-left p {
+    font-size: 19px;
+    margin-bottom: 28px;
+    max-width: 540px;
+}
+.btn {
+    background: #fb7171;
+    color: #fff;
+    border: none;
+    padding: 15px 42px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+}
+.btn:hover { background: #f96d6d; }
+.main-right img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.16);
+}
+@media (max-width: 1100px) {
+    .main { flex-direction: column; }
+    .main-left, .main-right { padding: 32px; }
+    .main-right { margin-top: -30px; }
+}
+
+/* Grid and block for first screenshot-like section */
+.showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 260px 260px;
+    grid-template-rows: 260px 260px;
+    gap: 22px;
+}
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.showcase-right {
+    background: #fb7171;
+    color: #151515;
+    padding: 36px 55px;
+    margin-left: 80px;
+    border-radius: 15px;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.showcase-right small {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.showcase-right h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+.showcase-right .btn-arrow {
+    color: #151515;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    transition: color .18s;
+    margin-top: 12px;
+}
+.showcase-right .btn-arrow:hover { color: #fff; }
+.showcase-right .btn-arrow::after {
+    content: " ➔";
+    font-size: 25px;
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+@media (max-width: 900px) {
+    .showcase { flex-direction: column; }
+    .showcase-right { margin-left: 0; margin-top: 34px; }
+    .gallery {
+    grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    }
+}
+</style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Order</a></li>
+    <li><a href="#">Food</a></li>
+    <li><a href="#">Restaurant</a></li>
+    <li><a href="#">Testimonials</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li class="menu-icon">≡</li>
+</ul>
+</nav>
+
+<!-- Second Screenshot Section (Split left: text, right: food image) -->
+<section class="main">
+<div class="main-left">
+    <h1>LOREM IPSUM</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est vitae dolor rhoncus tristique. Maecenas metus quam, rhoncus euismod lorem in, sollicitudin viverra eros. Donec dictum luctus quam ut tristique. Curabitur nec faucibus purus. Quisque congue sem nec justo mollis, in tincidunt erat pretium. Sed pulvinar, massa ac porta viverra.</p>
+    <button class="btn">Click Me</button>
+</div>
+<div class="main-right">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Burger and fries">
+</div>
+</section>
+
+<!-- First Screenshot Section (Grid of images with colored block) -->
+<section class="showcase">
+<div class="gallery">
+    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=400&q=80" alt="Stage on Broadway">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Dinner table">
+    <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=400&q=80" alt="Restaurant street">
+    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" alt="Food plate">
+</div>
+<div class="showcase-right">
+    <small>LOREM IPSUM</small>
+    <h2>LOREM IPSUM<br>SET ADEMIR</h2>
+    <button class="btn-arrow">Click</button>
+</div>
+</section>
+</body>
+</html>
